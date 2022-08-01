@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  test:
+    image: "testnginx:gama3"
+    ports:
+    - "8085:80"
+    deploy:
+      replicas: 1
+    networks:
+      - testnginx
+
+networks:
+  testnginx:
+    driver: bridge
